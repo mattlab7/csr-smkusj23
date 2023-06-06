@@ -4,6 +4,8 @@
     <title>Document</title>
 </head>
 <body>
-    <?php echo "Hello World"; ?> </php>
+    <h1>
+        <?php echo "Hello World"; ?>
+    </h1>
 </body>
 </html>

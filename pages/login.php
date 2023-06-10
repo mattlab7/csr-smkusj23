@@ -18,15 +18,15 @@
         <h2 class="text-center my-5">Login</h2>
         <form>
             <div class="form-group row">
-                <label for="exampleInputEmail1" class="col-sm-2 col-form-label">Email</label>
+                <label for="emailTextField" class="col-sm-2 col-form-label">Email</label>
                 <div class="col-sm-10">
-                    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+                    <input type="email" class="form-control" id="emailTextField" name="email" placeholder="Enter email">
                 </div>
             </div>
             <div class="form-group row">
-                <label for="inputPassword" class="col-sm-2 col-form-label">Password</label>
+                <label for="passwordTextField" class="col-sm-2 col-form-label">Password</label>
                 <div class="col-sm-10">
-                    <input type="password" class="form-control" id="inputPassword" placeholder="Enter password">
+                    <input type="password" class="form-control" id="passwordTextField" name="password" placeholder="Enter password">
                 </div>
             </div>
         </form>

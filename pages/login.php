@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>SMK USJ 23</title>
+    <title>Login :: SMK USJ 23</title>
 
     <!-- Bootstrap CSS  -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -13,31 +13,42 @@
 <body class="bg-dark text-light">
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-4 text-light">
-        <a class="navbar-brand" href="">SMK USJ23</a>
+        <a class="navbar-brand" href="../">SMK USJ23</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link" href="pages/login.php">Login</a>
+                <li class="nav-item active">
+                    <a class="nav-link" href="login.php">Login</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="pages/register.php">Register</a>
+                    <a class="nav-link" href="register.php">Register</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="pages/account.php">Account</a>
+                    <a class="nav-link" href="account.php">Account</a>
                 </li>
             </ul>
         </div>
     </nav>
-    <!-- Content body -->
-    <div class="container mt-4 text-center">
-        <img src="https://upload.wikimedia.org/wikipedia/ms/7/79/Sekolah_Menengah_Kebangsaan_USJ_23.png" alt="Logo SMK USJ 23" class="py-3">
-        <h1>Welcome to <strong>SMK USJ23</strong></h1>
-        <p><u>Sekolah Menengah Kebangsaan USJ 23</u> or its short name <em>SMK USJ 23</em>, is a secondary school that is located at Jalan Harmoni.</p>
-        <p>In 2009, the school logged an amount of 1391 students and 87 teachers.</p>
-        <cite>Sekolah Menengah Kebangsaan USJ 23. (2017, January 19). Wikipedia. Retrieved from <a href="https://ms.wikipedia.org/wiki/Sekolah_Menengah_Kebangsaan_USJ_23">ms.wikipedia.org</a></cite>
+    <!-- Form content body -->
+    <div class="container mt-4">
+        <h2 class="text-center my-5">Login</h2>
+        <form>
+            <div class="form-group row">
+                <label for="exampleInputEmail1" class="col-sm-2 col-form-label">Email</label>
+                <div class="col-sm-10">
+                    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="inputPassword" class="col-sm-2 col-form-label">Password</label>
+                <div class="col-sm-10">
+                    <input type="password" class="form-control" id="inputPassword" placeholder="Enter password">
+                </div>
+            </div>
+        </form>
+        <button type="submit" class="btn btn-primary">Login</button>
     </div>
 </body>
 </html>

@@ -5,15 +5,15 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
-            <li class="nav-item">
-                <a class="nav-link" href="/site/pages/login.php">Login</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="/site/pages/register.php">Register</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="/site/pages/account.php">Account</a>
-            </li>
+            <?php
+                if (isset($_SESSION['name'])) {
+                    echo "<li class='nav-item'><a class='nav-link' href='/site/pages/account.php'>Account</a></li>";
+                    echo "<li class='nav-item'><a class='nav-link' href='/site/components/logout_process.php'>Logout</a></li>";
+                } else {
+                    echo "<li class='nav-item'><a class='nav-link' href='/site/pages/login.php'>Login</a></li>";
+                    echo "<li class='nav-item'><a class='nav-link' href='/site/pages/register.php'>Register</a></li>";
+                }
+            ?>
         </ul>
     </div>
 </nav>

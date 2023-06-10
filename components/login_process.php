@@ -1,8 +1,6 @@
 <?php
-    include('debug.php');
     include('core.php');
 
-    session_start();
     $dbContext = dbInit();
 
     function retrieveFormFields() {
@@ -16,7 +14,6 @@
 
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $formFields = retrieveFormFields();
-        console_log($formFields);
 
         $query = "SELECT * FROM users WHERE 
                     email = '" . $formFields['email'] . 
@@ -24,13 +21,16 @@
 
         $result = $dbContext->query($query);
 
+        $dbContext->close();
+
         if ($result->num_rows == 1) {
-            $_SESSION['email'] = $email;
+            session_start();
+            $_SESSION['name'] = $result->fetch_object()->fullName;
             echo "<script>alert('Successful!'); window.location.href = '../index.php';</script>";
+            exit();
         } else {
             echo "<script>alert('Invalid username or password!'); window.location.href = '../pages/login.php';</script>";
+            exit();
         }
-
-        $dbContext->close();
     }
 ?>

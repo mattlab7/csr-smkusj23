@@ -16,7 +16,7 @@
     <!-- Form content body -->
     <div class="container mt-4">
         <h2 class="text-center my-5">Register</h2>
-        <form>
+        <form method="POST" action="../components/register_process.php">
             <div class="form-group">
                 <label for="fullNameTextField">Full Name</label>
                 <input type="text" class="form-control" id="fullNameTextField" name="fullName" placeholder="Enter full name">

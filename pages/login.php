@@ -16,7 +16,7 @@
     <!-- Form content body -->
     <div class="container mt-4">
         <h2 class="text-center my-5">Login</h2>
-        <form method="POST" action="../components/login_process.php">
+        <form>
             <div class="form-group row">
                 <label for="emailTextField" class="col-sm-2 col-form-label">Email</label>
                 <div class="col-sm-10">

@@ -12,46 +12,28 @@
 </head>
 <body class="bg-dark text-light">
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-4 text-light">
-        <a class="navbar-brand" href="../">SMK USJ23</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link" href="login.php">Login</a>
-                </li>
-                <li class="nav-item active">
-                    <a class="nav-link" href="register.php">Register</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="account.php">Account</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
+    <?php include('../components/nav.php') ?>
     <!-- Form content body -->
     <div class="container mt-4">
         <h2 class="text-center my-5">Register</h2>
         <form>
             <div class="form-group">
-                <label for="exampleInputName1">Full Name</label>
-                <input type="text" class="form-control" id="exampleInputName1" placeholder="Enter full name">
+                <label for="fullNameTextField">Full Name</label>
+                <input type="text" class="form-control" id="fullNameTextField" name="fullName" placeholder="Enter full name">
             </div>
             <div class="row">
                 <div class="form-group col">
-                    <label for="exampleInputEmail1">Email address</label>
-                    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+                    <label for="emailTextField">Email address</label>
+                    <input type="email" class="form-control" id="emailTextField" name="email" placeholder="Enter email">
                 </div>
                 <div class="form-group col">
-                    <label for="exampleInputPassword1">Password</label>
-                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Enter password">
+                    <label for="passwordTextField">Password</label>
+                    <input type="password" class="form-control" id="passwordTextField" name="password" placeholder="Enter password">
                 </div>
             </div>
             <div class="form-group">
-                <label for="exampleFormControlSelect1">Class</label>
-                <select class="form-control" id="exampleFormControlSelect1">
+                <label for="classSelect">Class</label>
+                <select class="form-control" id="classSelect" name="class">
                     <option>Select option</option>
                     <option>Teacher</option>
                     <option>1 Adil</option>
@@ -67,8 +49,8 @@
                 </select>
             </div>
             <div class="form-group">
-                <label for="exampleFormControlTextarea1">Address</label>
-                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                <label for="addressTextArea">Address</label>
+                <textarea class="form-control" id="addressTextArea" name="address" rows="3"></textarea>
             </div>
             <button type="submit" class="btn btn-primary">Register</button>
         </form>

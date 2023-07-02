@@ -1,5 +1,6 @@
 <?php
     include('core.php');
+    include('ROT13.php');
 
     $dbContext = dbInit();
 
@@ -14,6 +15,7 @@
 
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $formFields = retrieveFormFields();
+        $formFields['password'] = encryptPassword($formFields['password']);
 
         $query = "SELECT * FROM users WHERE 
                     email = '" . $formFields['email'] . 

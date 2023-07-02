@@ -22,10 +22,9 @@
 
         $result = $dbContext->query($query);
 
-        $dbContext->close();
-
         if ($result->num_rows > 0) {
             echo "<script>alert('Username or email already exists!'); window.location.href = '../pages/register.php';</script>";
+            $dbContext->close();
         } else {
             $query = "INSERT INTO users (fullName, email, password, address, class) 
                         VALUES ('". $formFields['fullName'] . "','" 
@@ -38,9 +37,11 @@
                 session_start();
                 $_SESSION['name'] = $result->fetch_object()->fullName;
                 echo "<script>alert('Successful!'); window.location.href = '../index.php';</script>";
+                $dbContext->close();
                 exit();
             } else {
                 echo "<script>alert('Error! " . $dbContext->error . "'); window.location.href = '../pages/register.php';</script>";
+                $dbContext->close();
                 exit();
             }
         }

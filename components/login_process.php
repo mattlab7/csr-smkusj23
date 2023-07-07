@@ -1,6 +1,7 @@
 <?php
     include('core.php');
     include('ROT13.php');
+    include('debug.php');
 
     $dbContext = dbInit();
 
@@ -27,7 +28,16 @@
 
         if ($result->num_rows == 1) {
             session_start();
-            $_SESSION['name'] = $result->fetch_object()->fullName;
+
+            $result = $result->fetch_object();
+            console_log($result);
+
+            $_SESSION['name'] = $result->fullName;
+            $_SESSION['id'] = $result->id;
+
+            console_log($_SESSION);
+
+
             echo "<script>alert('Successful!'); window.location.href = '../index.php';</script>";
             exit();
         } else {

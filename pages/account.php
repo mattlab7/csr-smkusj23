@@ -12,15 +12,36 @@
 
     <?php
         session_start();
+
+        include('../components/read_user_process.php');
+
+        $details = retrieveDatabaseDetails();
     ?>
 </head>
 <body class="bg-dark text-light">
     <!-- Navbar -->
     <?php include('../components/nav.php') ?>
     <!-- Content body -->
-    <div class="container mt-4 text-center">
-        <h1 class="text-center my-5">Later :)</h1>
-        <h4 class="text-center">We'll unlock this section as you go into the MySQL and PHP parts</h4>
+    <div class="container mt-4">
+        <h2 class="text-center my-5">Account</h2>
+        <form method="POST" action="../components/register_process.php">
+            <div class="form-group">
+                <label for="fullNameTextField">Full Name</label>
+                <input type="text" class="form-control" id="fullNameTextField" name="fullName" placeholder="Enter full name" disabled value="<?php echo $details->fullName ?>">
+            </div>
+            <div class="form-group">
+                <label for="emailTextField">Email address</label>
+                <input type="email" class="form-control" id="emailTextField" name="email" placeholder="Enter email"  disabled value="<?php echo $details->email ?>">
+            </div>
+            <div class="form-group">
+                <label for="classSelect">Class</label>
+                <input type="text" class="form-control" id="classSelect" name="class" placeholder="Enter class" disabled value="<?php echo $details->class ?>">
+            </div>
+            <div class="form-group">
+                <label for="addressTextArea">Address</label>
+                <textarea class="form-control" id="addressTextArea" name="address" rows="3"  disabled><?php echo $details->address ?></textarea>
+            </div>
+        </form>
     </div>
 </body>
 </html>

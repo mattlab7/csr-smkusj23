@@ -8,7 +8,7 @@
             <?php
                 if (isset($_SESSION['name'])) {
                     echo "<li class='nav-item'><a class='nav-link' href='/csr-smkusj23/pages/account.php'>Account</a></li>";
-                    echo "<li class='nav-item'><a class='nav-link' href='/site/components/logout_process.php'>Logout</a></li>";
+                    echo "<li class='nav-item'><a class='nav-link' href='/csr-smkusj23/components/logout_process.php'>Logout</a></li>";
                 } else {
                     echo "<li class='nav-item'><a class='nav-link' href='/csr-smkusj23/pages/login.php'>Login</a></li>";
                     echo "<li class='nav-item'><a class='nav-link' href='/csr-smkusj23/pages/register.php'>Register</a></li>";

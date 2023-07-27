@@ -9,6 +9,10 @@ function encryptPassword($password)
             $ascii = ord($char);
             $ascii = ($ascii >= 65 && $ascii <= 90) ? (($ascii - 65 + 13) % 26 + 65) : (($ascii - 97 + 13) % 26 + 97);
             $char = chr($ascii);
+        } elseif (ctype_digit($char)) {
+            $digit = intval($char);
+            $digit = ($digit >= 0 && $digit <= 9) ? (($digit - 0 + 5) % 10 + 0) : $digit;
+            $char = strval($digit);
         }
         $encryptedPassword .= $char;
     }
